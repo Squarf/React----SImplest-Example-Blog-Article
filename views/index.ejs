@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>A Simple, but practical React.js Example</h1>
+    <p class="indented">React can be difficult to learn, even with all the examples that are out there. I really wanted a minimalist, real world example of how to do it. Unable to find one
+      that suited my needs, I built this. It's not meant to do more than to just give you the very basics of React.js syntax, and help show via code how React.js works. 
+      You will need to learn a lot more to make a complex application but this is a good first step. 
+    </p>
+    <h2>This Makes it Easy By: </h2>
+    <ul>
+      <li>One File</li>
+      <li>One Component</li>
+      <li>Includes Plain JavaScript Helper Function</li>
+      <li>Just State and No Props, For A Toy Example</li>
+    </ul>
+    <h2>What This App Does -- Simple Text Input Validation</h2>
+    <div class="indented">
+      <h3> Before Text Input</h3>
+      <img class="indented" src = "/images/SimpleApp.PNG"> 
+      <p class="indented"> Above is the entirety of the application. It takes text input and will validate whether or not the validation is 
+        valid only after the submit button has been pushed. There are no bells, there are no whistles, it's just straight up easy, in an attempt to 
+        highlight React.js. 
+      <h3>After Input and Short Text Input</h3>
+      <img class="indented" src = "/images/SimpleError.PNG"> 
+      <p class="indented">Above is the error state of the application. This happens after the submit button has been clicked and when the
+        name field has less than 4 characters in it.  </p>
+      </div>
+    <h1>The React Bits: </h1>
+    <h2>All of the React Code:</h2>
+    <div align="center">
+      <img src="/images/AllLines.PNG">
+    </div>
+    <p class="indented">This is a lot, let's break it down.</p>
+    <h3>Constructor</h3>
+    <div align="center">
+      <img src="/images/Constructor.PNG">
+    </div>
+    <p class="indented"> Here we create the component, and set all the values that it needs. Since we only have one component, we only need to store the state contained 
+      within it. If we had multiple components (which again, we do not) we would store of the sub-components states here as well.
+    </p>
+    <p class="indented">We also bind our handlers (handleChange and handleSubmit). By bind them
+      we allow this.handleChange to apply to this object. 
+    </p>
+    <h3>Handlers</h3>
+    <div align="center">
+      <img src="/images/Handlers.PNG">
+    </div>
+    <p class="indented">Here is where we set our state. The only 'approved' way to set state is by calling this.setSTate().</p>
+    <h3>Render</h3>
+    <div align="center">
+      <img src="/images/render.PNG">
+    </div>
+    <p class="indented">The syntax here is JSX and is not just native javascript. Will get called when this.setState is called. In this render function, we handle the view of this component
+      and tie that in with the handlers for their actions. You will notice we assign value and onChange, and even read this.state.hasSubmitted. We also </p>
+    <h3>Validator Function</h3>
+    <div align="center">
+      <img src="/images/helperFunction.PNG">
+    </div>
+    <p class="indented">Here we have a simple validator function. This is a way you can do helper functions in order to keep your render function cleanly, or even tie in helper functions 
+      from other JavaScript classes. 
+    </p>
+    <h3>Export</h3>
+    <div align="center">
+      <img src="/images/export.PNG">
+    </div>
+    <p class="indented">Don't forget to export your component after your class!</p>
+    <h3>Conclusion</h3>
+    <in
+    <p class="indented">I hope this provides you an easy as possible introductory example of a React.js Application. This is meant to be a barebones example to show the very basic
+      aspects of <a href ="https://reactjs.org/"> React.js.</a>
+    </p>
+  </body>
+</html>
